@@ -1,15 +1,13 @@
-﻿namespace ConsoleApp2
+﻿
+namespace ConsoleApp2
 { 
     internal class Program
     {
         static void Main(string[] args)
         {
-            int? x = null;
-            Console.WriteLine(x);
-            int y;
-            y = x ?? -1;
-            Console.WriteLine(y);
-            float cTemp, fTemp;
+            Valid_Para_20 vp20 = new Valid_Para_20();
+            Console.WriteLine(vp20.get_result());
+            
         }
     }
 }

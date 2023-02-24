@@ -24,9 +24,7 @@ namespace WinFormsApp1
         public Form2()
         {
             InitializeComponent();
-
             account = Interaction.InputBox("input account: ", "login", "Mary", -1, -1);
-            password = Interaction.InputBox("input password: ", "login", "", -1, -1);
         }
     }
 }
