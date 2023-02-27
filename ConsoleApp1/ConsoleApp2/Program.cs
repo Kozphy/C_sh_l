@@ -16,6 +16,9 @@ namespace ConsoleApp2
             Merge_two_sorted_list_21 mtsl21 = new Merge_two_sorted_list_21();
             mtsl21.GetResult();
             **/
+
+            Best_Time_121 bt121 = new Best_Time_121();
+            bt121.GetResult();
             
         }
     }

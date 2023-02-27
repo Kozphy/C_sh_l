@@ -20,3 +20,6 @@
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form2.resources
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form3.resources
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form4.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form5.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Mouse_event_form.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form6.resources
