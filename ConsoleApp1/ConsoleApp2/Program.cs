@@ -17,9 +17,13 @@ namespace ConsoleApp2
             mtsl21.GetResult();
             **/
 
-            Best_Time_121 bt121 = new Best_Time_121();
-            bt121.GetResult();
-            
+            //Best_Time_121 bt121 = new Best_Time_121();
+            //bt121.GetResult();
+
+            /*
+            Valid_pali_125 vp125 = new Valid_pali_125();
+            vp125.GetResult();
+            */
         }
     }
 }

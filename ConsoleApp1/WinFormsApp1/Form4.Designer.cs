@@ -52,7 +52,6 @@
             label1.Size = new Size(57, 15);
             label1.TabIndex = 0;
             label1.Text = "KeyDown";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -89,7 +88,6 @@
             label5.Size = new Size(54, 15);
             label5.TabIndex = 4;
             label5.Text = "KeyCode";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -99,7 +97,6 @@
             label6.Size = new Size(38, 15);
             label6.TabIndex = 5;
             label6.Text = "label6";
-            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -109,7 +106,6 @@
             label7.Size = new Size(51, 15);
             label7.TabIndex = 6;
             label7.Text = "KeyChar";
-            label7.Click += label7_Click;
             // 
             // label8
             // 

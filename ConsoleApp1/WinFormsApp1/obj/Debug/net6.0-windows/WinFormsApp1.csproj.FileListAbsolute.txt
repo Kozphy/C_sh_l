@@ -23,3 +23,11 @@
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form5.resources
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Mouse_event_form.resources
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form6.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form7.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form8.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form9.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form10.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Randoms.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.DateTimes.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Strings.resources

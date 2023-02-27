@@ -16,20 +16,29 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+
         int gender = 0;
         bool fgVel = false;
         bool fgHDC = false;
         int age = 0;
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("hello");
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             gender = 1;
-            groupBox3.Visible = true;
+            groupBox2.Visible = true;
         }
+
+        private void radioButton2_CheckedChanged(object                                                                                                                                                                                                                                        sender, EventArgs e)
+        {
+            gender = 0;
+            groupBox2.Visible = false;
+        }
+        
+
     }
 }

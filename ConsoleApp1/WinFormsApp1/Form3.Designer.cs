@@ -44,7 +44,6 @@
             label1.Size = new Size(79, 15);
             label1.TabIndex = 0;
             label1.Text = "購買泡麵數量";
-            label1.Click += label1_Click;
             // 
             // label2
             // 

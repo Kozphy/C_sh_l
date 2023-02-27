@@ -11,13 +11,20 @@ namespace WinFormsApp1
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //            Application.Run(new Form1());
+            // Application.Run(new Form1());
             // Application.Run(new Form2());
             // Application.Run(new Form3());
-            // Application.Run(new Form4());
+            //Application.Run(new Form4());
             // Application.Run(new Form5());
-            // application.Run(new Mouse_event_form());
-            Application.Run(new Form6());
+            // Application.Run(new Mouse_event_form());
+            // Application.Run(new Form6());
+            //Application.Run(new Form7());
+            //Application.Run(new Form8());
+            //Application.Run(new Form9());
+            //Application.Run(new Form10());
+            //Application.Run(new Randoms());
+            //Application.Run(new DateTimes());
+            Application.Run(new Strings());
         }
     }
 }

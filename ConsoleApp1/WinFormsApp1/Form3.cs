@@ -12,15 +12,10 @@ namespace WinFormsApp1
 {
     public partial class Form3 : Form
     {
-        
+
         public Form3()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -36,5 +31,7 @@ namespace WinFormsApp1
 
             label3.Text = "總金額: " + Convert.ToString(noodle_total + soda_total);
         }
+
+
     }
 }
