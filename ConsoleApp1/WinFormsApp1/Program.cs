@@ -24,7 +24,9 @@ namespace WinFormsApp1
             //Application.Run(new Form10());
             //Application.Run(new Randoms());
             //Application.Run(new DateTimes());
-            Application.Run(new Strings());
+            //Application.Run(new Strings());
+            //Application.Run(new StringBuilders());
+            //Application.Run(new arrays());
         }
     }
 }
