@@ -1,0 +1,103 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Rick.Docs.Samples.RouteInfo/1.0.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Docs.Samples.RouteInfo.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Docs.Samples.RouteInfo.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Rick.Docs.Samples.RouteInfo/1.0.0.8": {
+      "sha512": "vEBI0EVUCM1cMl0ZqQsmXyoZlDykT48ZscxQi7zH8xgfO896jsDqYPTw9BSzMDlQ6iPh5GtsftKmXnZpi4R1bg==",
+      "type": "package",
+      "path": "rick.docs.samples.routeinfo/1.0.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Microsoft.Docs.Samples.RouteInfo.dll",
+        "rick.docs.samples.routeinfo.1.0.0.8.nupkg.sha512",
+        "rick.docs.samples.routeinfo.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Rick.Docs.Samples.RouteInfo >= 1.0.0.8"
+    ]
+  },
+  "packageFolders": {
+    "/home/zixsa/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/zixsa/Csharp_l/ConsoleApp1/MvcMovie/MvcMovie.csproj",
+      "projectName": "MvcMovie",
+      "projectPath": "/home/zixsa/Csharp_l/ConsoleApp1/MvcMovie/MvcMovie.csproj",
+      "packagesPath": "/home/zixsa/.nuget/packages/",
+      "outputPath": "/home/zixsa/Csharp_l/ConsoleApp1/MvcMovie/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/zixsa/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Rick.Docs.Samples.RouteInfo": {
+            "target": "Package",
+            "version": "[1.0.0.8, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.406/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

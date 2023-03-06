@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MvcMovie/1.0.0": {
+        "dependencies": {
+          "Rick.Docs.Samples.RouteInfo": "1.0.0.8"
+        },
+        "runtime": {
+          "MvcMovie.dll": {}
+        }
+      },
+      "Rick.Docs.Samples.RouteInfo/1.0.0.8": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Docs.Samples.RouteInfo.dll": {
+            "assemblyVersion": "1.0.0.8",
+            "fileVersion": "1.0.0.8"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MvcMovie/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rick.Docs.Samples.RouteInfo/1.0.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vEBI0EVUCM1cMl0ZqQsmXyoZlDykT48ZscxQi7zH8xgfO896jsDqYPTw9BSzMDlQ6iPh5GtsftKmXnZpi4R1bg==",
+      "path": "rick.docs.samples.routeinfo/1.0.0.8",
+      "hashPath": "rick.docs.samples.routeinfo.1.0.0.8.nupkg.sha512"
+    }
+  }
+}
