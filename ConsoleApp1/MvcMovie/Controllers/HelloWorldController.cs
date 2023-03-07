@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
+using System;
 
 namespace MvcMovie.Controllers
 {
@@ -7,10 +8,12 @@ namespace MvcMovie.Controllers
     {
         // 
         // GET: /HelloWorld/
-
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            return View();
+            // return "This is my default action...";
         }
 
         // 

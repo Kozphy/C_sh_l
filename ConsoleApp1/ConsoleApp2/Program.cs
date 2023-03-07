@@ -8,8 +8,8 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            leetcodeResult();
-            
+            // leetcodeResult();
+            fib.fib_set.fib_execute();
         }
         private static void leetcodeResult()
         {
