@@ -26,7 +26,10 @@ namespace WinFormsApp1
             //Application.Run(new DateTimes());
             //Application.Run(new Strings());
             //Application.Run(new StringBuilders());
+            //Application.Run(new bubble_sort());
             //Application.Run(new arrays());
+            //Application.Run(new enum_flag());
+            Application.Run(new array_sort());
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8XQl1m9Rzo+0m44ISgxwtFrxEjsJFE04LNKjNd48YtAejb/lT3GWgfZttZAiTTlOgR297k/K2QbGubEvYWbpQA==",
+  "dgSpecHash": "gpuVo269GsK8NK2zr+zRefugIenG0oKRN6SE2aLFvrj4YUOIL3PsX9zn+nBgFSx7AReW8uylQqy857dQxL2fdQ==",
   "success": true,
-  "projectFilePath": "/home/zixsa/Csharp_l/ConsoleApp1/ConsoleApp2/ConsoleApp2.csproj",
+  "projectFilePath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

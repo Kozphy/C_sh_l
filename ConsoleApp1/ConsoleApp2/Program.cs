@@ -1,5 +1,6 @@
 ﻿
 using ConsoleApp2.grind_169;
+using ConsoleApp2.test_fun;
 using System.ComponentModel;
 
 namespace ConsoleApp2
@@ -33,6 +34,10 @@ namespace ConsoleApp2
 
             Invert_bin_226 ib226 = new Invert_bin_226();
             ib226.GetResult();
+        }
+
+        private static void shadow_copy() { 
+            test_fun 
         }
 
         private static void StaticModifier()

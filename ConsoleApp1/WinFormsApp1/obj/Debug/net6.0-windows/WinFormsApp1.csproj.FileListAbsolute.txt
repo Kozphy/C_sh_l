@@ -32,3 +32,7 @@
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.DateTimes.resources
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Strings.resources
 \\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.StringBuilders.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.arrays.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.enum_flag.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.array_sort.resources
+\\wsl.localhost\Ubuntu-20.04\home\zixsa\Csharp_l\ConsoleApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.bubble_sort.resources

@@ -4,13 +4,22 @@
     <Compile Update="arrays.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="array_sort.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="DateTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="enum_flag.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="bubble_sort.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form2.cs">
