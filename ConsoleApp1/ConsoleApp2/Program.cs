@@ -1,6 +1,6 @@
 ﻿
 using ConsoleApp2.grind_169;
-using ConsoleApp2.test_fun;
+using ConsoleApp2.test_func;
 using System.ComponentModel;
 
 namespace ConsoleApp2
@@ -10,7 +10,8 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             // leetcodeResult();
-            fib.fib_set.fib_execute();
+            //fib.fib_set.fib_execute();
+            Shadow_deep_copy();
         }
         private static void leetcodeResult()
         {
@@ -32,12 +33,15 @@ namespace ConsoleApp2
             vp125.GetResult();
             */
 
-            Invert_bin_226 ib226 = new Invert_bin_226();
-            ib226.GetResult();
+            //Invert_bin_226 ib226 = new Invert_bin_226();
+            //ib226.GetResult();
+
+            Shadow_deep_copy();
         }
 
-        private static void shadow_copy() { 
-            test_fun 
+        private static void Shadow_deep_copy() {
+            shadow_deep_copy sdc = new shadow_deep_copy();
+            sdc.Start();
         }
 
         private static void StaticModifier()
