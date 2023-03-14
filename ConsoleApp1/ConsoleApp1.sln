@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{06283803-65FC-43EC-BE39-F713C45BC1F2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulkyBookWeb", "BulkyBookWeb\BulkyBookWeb\BulkyBookWeb.csproj", "{EA09F9C6-8027-40EB-84A9-ADC268C63022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{06283803-65FC-43EC-BE39-F713C45BC1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06283803-65FC-43EC-BE39-F713C45BC1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06283803-65FC-43EC-BE39-F713C45BC1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA09F9C6-8027-40EB-84A9-ADC268C63022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA09F9C6-8027-40EB-84A9-ADC268C63022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA09F9C6-8027-40EB-84A9-ADC268C63022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA09F9C6-8027-40EB-84A9-ADC268C63022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
