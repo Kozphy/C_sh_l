@@ -10886,24 +10886,26 @@
     ]
   },
   "packageFolders": {
-    "/home/zixsa/.nuget/packages/": {}
+    "C:\\Users\\dbdf0\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zixsa/Csharp_l/ConsoleApp1/MvcMovie/MvcMovie.csproj",
+      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
       "projectName": "MvcMovie",
-      "projectPath": "/home/zixsa/Csharp_l/ConsoleApp1/MvcMovie/MvcMovie.csproj",
-      "packagesPath": "/home/zixsa/.nuget/packages/",
-      "outputPath": "/home/zixsa/Csharp_l/ConsoleApp1/MvcMovie/obj/",
+      "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
+      "packagesPath": "C:\\Users\\dbdf0\\.nuget\\packages\\",
+      "outputPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\MvcMovie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/zixsa/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dbdf0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10974,7 +10976,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.406/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

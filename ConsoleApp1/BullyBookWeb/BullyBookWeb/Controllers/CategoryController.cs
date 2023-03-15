@@ -21,7 +21,9 @@ namespace BullyBookWeb.Controllers
         // GET: Category
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Category.ToListAsync());
+            //return View(objCategoryList);
+            var objCategoryList = await _context.Category.ToListAsync();
+            return View(objCategoryList);
         }
 
         // GET: Category/Details/5
