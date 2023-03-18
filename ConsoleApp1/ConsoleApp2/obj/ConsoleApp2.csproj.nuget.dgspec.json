@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {}
+    "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {}
   },
   "projects": {
-    "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {
+    "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectUniqueName": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
         "projectName": "ConsoleApp2",
-        "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
         "packagesPath": "C:\\Users\\dbdf0\\.nuget\\packages\\",
-        "outputPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\zixsa\\Csharp_l\\ConsoleApp1\\ConsoleApp2\\obj\\",
+        "outputPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\ConsoleApp2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dbdf0\\AppData\\Roaming\\NuGet\\NuGet.Config",
