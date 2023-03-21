@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MiddlewareExample.CustomMiddleware;
 using MvcMovie.CustomMiddleware;
+using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<MyCustomMiddleware>();
@@ -37,47 +38,98 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-// middleware 1
-app.Use(async (HttpContext context, RequestDelegate next) =>
+app.UseEndpoints(endpoints =>
 {
-    await context.Response.WriteAsync("Hello");
-    await next(context);
+    endpoints.Map("files/{filename}.{extension}", async context =>
+    {
+        string? fileName = Convert.ToString(context.Request.RouteValues["filename"]);
+        string? extension = Convert.ToString(context.Request.RouteValues["extension"]);
+        await context.Response.WriteAsync($"In files -{fileName} - {extension}");
+    });
+
+    endpoints.Map("employee/profile/{EmployName=harsha}", async context => {
+        string? employName = Convert.ToString(context.Request.RouteValues["employname"]);
+        await context.Response.WriteAsync($"In Employee profile - {employName}");
+    });
+
+    endpoints.Map("products/details/{id?:int}", async context =>
+    {
+        if (context.Request.RouteValues.ContainsKey("id"))
+        {
+            string? id = Convert.ToString(context.Request.RouteValues["id"]);
+            await context.Response.WriteAsync($"Products details - {id}");
+        }
+        else {
+            await context.Response.WriteAsync($"Products details - id is not supplied");
+        }
+    });
 });
 
-// middleware UseWhen
-app.UseWhen(
-    context => context.Request.Query.ContainsKey("username"),
-    app =>
-    {
-        app.Use(async (context, next) =>
-        {
-            await context.Response.WriteAsync("Hello from Middleware branch");
-            await next();
-        });
-    }
-);
+app.UseEndpoints(endpoints =>
+{
+    // add your endpoints here
 
-app.Use(async (HttpContext context, RequestDelegate next) =>
-    await context.Response.WriteAsync("Hello from main middleware.")
-); 
+    endpoints.MapGet("map1", async (context) =>
+    {
+        await context.Response.WriteAsync("In Map 1");
+    });
+
+    endpoints.MapPost("map2", async (context) =>
+    {
+        await context.Response.WriteAsync("In Map 2");
+    });
+});
+
+
+
+//app.UseAuthorization();
+
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+// middleware 1
+//app.Use(async (HttpContext context, RequestDelegate next) =>
+//{
+//    await context.Response.WriteAsync("Hello");
+//    await next(context);
+//});
+
+// middleware UseWhen
+//app.UseWhen(
+//    context => context.Request.Query.ContainsKey("username"),
+//    app =>
+//    {
+//        app.Use(async (context, next) =>
+//        {
+//            await context.Response.WriteAsync("Hello from Middleware branch");
+//            await next();
+//        });
+//    }
+//);
+
+//app.Use(async (HttpContext context, RequestDelegate next) =>
+//    await context.Response.WriteAsync("Hello from main middleware.")
+//); 
 
 // middleware 2
 //app.UseMiddleware<MyCustomMiddleware>();
-app.UseMyCustomMiddleware();
+//app.UseMyCustomMiddleware();
 
 // conventional middleware
-app.UseConventional_middleware();
+//app.UseConventional_middleware();
 
 // middleware 3
-app.Use(async (HttpContext context, RequestDelegate next) =>
+//app.Use(async (HttpContext context, RequestDelegate next) =>
+//{
+//    await context.Response.WriteAsync("End");
+//});
+
+app.Run(async context =>
 {
-    await context.Response.WriteAsync("End");
-});
+    await context.Response.WriteAsync($"Request received at {context.Request.Path}");
+}
+);
 
 app.Run();
