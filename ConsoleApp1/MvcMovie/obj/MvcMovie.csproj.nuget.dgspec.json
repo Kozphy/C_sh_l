@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj": {}
+    "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj": {
+    "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
-        "packagesPath": "C:\\Users\\dbdf0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\obj\\",
+        "projectPath": "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
+        "packagesPath": "C:\\Users\\zixsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dbdf0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zixsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,23 +40,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Data.Sqlite": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.SQLite": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -64,9 +60,21 @@
               "target": "Package",
               "version": "[6.0.14, )"
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.13, )"
             },
             "Rick.Docs.Samples.RouteInfo": {
               "target": "Package",

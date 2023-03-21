@@ -1,12 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 using System;
+using Microsoft.Extensions.Configuration;
 
 namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
     {
-        // 
+        private readonly IConfiguration Configuration;
+        public HelloWorldController(IConfiguration configuration){
+            this.Configuration = configuration;
+        }
+         public ContentResult OnGet()
+        {
+            var mylaptop = Configuration["laptop"];
+
+            return Content($"Mylaptop value: {mylaptop} \n");
+        }
+
+        public IConfiguration Configuration1 => Configuration;
+
         // GET: /HelloWorld/
         public IActionResult Index()
         {
