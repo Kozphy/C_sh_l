@@ -10831,11 +10831,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
+      "projectUniqueName": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
       "projectName": "MvcMovie",
-      "projectPath": "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
+      "projectPath": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\MvcMovie.csproj",
       "packagesPath": "C:\\Users\\zixsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zixsa\\Desktop\\C_sh_l\\ConsoleApp1\\MvcMovie\\obj\\",
+      "outputPath": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\MvcMovie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zixsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
