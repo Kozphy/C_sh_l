@@ -52,7 +52,7 @@ app.UseEndpoints(endpoints =>
         await context.Response.WriteAsync($"In Employee profile - {employName}");
     });
 
-    endpoints.Map("products/details/{id?:int}", async context =>
+    endpoints.Map("products/details/{id:int?}", async context =>
     {
         if (context.Request.RouteValues.ContainsKey("id"))
         {
