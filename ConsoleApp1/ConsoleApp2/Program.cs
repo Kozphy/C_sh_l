@@ -2,6 +2,7 @@
 using ConsoleApp2.grind_169;
 using ConsoleApp2.test_func;
 using System.ComponentModel;
+using ConsoleApp2.practice.abstract_p;
 
 namespace ConsoleApp2
 {
@@ -11,7 +12,21 @@ namespace ConsoleApp2
         {
             // leetcodeResult();
             //fib.fib_set.fib_execute();
-            Shadow_deep_copy();
+            //Shadow_deep_copy();
+            //IEnumerate_P E_p = new IEnumerate_P();
+            //E_p.Dog_iter();
+
+            Shape[] shapes = new Shape[] {
+                new Sphere(4),
+                new Cube(3)
+            };
+
+            foreach(Shape shape in shapes)
+            {
+                shape.GetInfo();
+                Console.WriteLine("{0} has a volume of {1}", shape.Name, shape.Volume());
+            }
+            
         }
         private static void leetcodeResult()
         {
