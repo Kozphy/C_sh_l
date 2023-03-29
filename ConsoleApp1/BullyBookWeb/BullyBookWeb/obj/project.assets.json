@@ -10511,19 +10511,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dbdf0\\.nuget\\packages\\": {}
+    "C:\\Users\\zixsa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\BullyBookWeb\\BullyBookWeb\\BullyBookWeb.csproj",
+      "projectUniqueName": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\BullyBookWeb\\BullyBookWeb\\BullyBookWeb.csproj",
       "projectName": "BullyBookWeb",
-      "projectPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\BullyBookWeb\\BullyBookWeb\\BullyBookWeb.csproj",
-      "packagesPath": "C:\\Users\\dbdf0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\BullyBookWeb\\BullyBookWeb\\obj\\",
+      "projectPath": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\BullyBookWeb\\BullyBookWeb\\BullyBookWeb.csproj",
+      "packagesPath": "C:\\Users\\zixsa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\BullyBookWeb\\BullyBookWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dbdf0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\zixsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

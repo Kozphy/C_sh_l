@@ -11,7 +11,8 @@ namespace ConsoleApp2.test_func
 {
     public class shadow_deep_copy
     {
-        public void Start()
+
+        public static void Start()
         {
             Person ps1 = new Person(25, "david", 0);
 

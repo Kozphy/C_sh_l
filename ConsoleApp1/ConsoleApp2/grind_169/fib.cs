@@ -1,9 +1,13 @@
-namespace fib;
-    
 using static System.Console;
 
+namespace fib;
 public class fib_set {
-    public static void fib_execute(){
+    public static void Start()
+    {
+        fib_execute();
+    }
+
+    private static void fib_execute(){
         WriteLine("using recursive with fib");
         Write("Please input integer: ");
         int num;
