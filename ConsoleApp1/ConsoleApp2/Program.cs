@@ -3,11 +3,16 @@ using ConsoleApp2.grind_169;
 using ConsoleApp2.test_func;
 using System.ComponentModel;
 using ConsoleApp2.practice.abstract_p;
+using ConsoleApp2.practice.inher;
 
 namespace ConsoleApp2
 {
     internal class Program
     {
+        private static void Inheritance_practice() { 
+            VedioPost vedioPost1 = new VedioPost("FailVedio",true, "Denis Panjuta", "https://video.com/failvideo",10);
+            vedioPost1.Play();
+        }
         static void Main(string[] args)
         {
             // leetcodeResult();
@@ -15,17 +20,18 @@ namespace ConsoleApp2
             //Shadow_deep_copy();
             //IEnumerate_P E_p = new IEnumerate_P();
             //E_p.Dog_iter();
+            Inheritance_practice();
 
-            Shape[] shapes = new Shape[] {
-                new Sphere(4),
-                new Cube(3)
-            };
+            //Shape[] shapes = new Shape[] {
+            //    new Sphere(4),
+            //    new Cube(3)
+            //};
 
-            foreach(Shape shape in shapes)
-            {
-                shape.GetInfo();
-                Console.WriteLine("{0} has a volume of {1}", shape.Name, shape.Volume());
-            }
+            //foreach(Shape shape in shapes)
+            //{
+            //    shape.GetInfo();
+            //    Console.WriteLine("{0} has a volume of {1}", shape.Name, shape.Volume());
+            //}
             
         }
         private static void leetcodeResult()
