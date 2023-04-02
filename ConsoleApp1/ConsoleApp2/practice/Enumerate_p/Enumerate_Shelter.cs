@@ -16,10 +16,11 @@ namespace ConsoleApp2.practice.Enumerate_p
     //</summary>
 
     /*
-        When it is recommend to use the IEnumerable interface:
-        Your collection represents a massive database table,
-        you don't want to copy the entire thing into memory and cause performance issues in your application.
-        When it is not recommend to use the IEnumerable interface:
+        When it is recommended to use the IEnumerable interface:
+        If your collection represents a large database table,
+        and you don't want to copy the entire table into memory, which can cause performance issues in your application.
+        
+        When it is not recommended to use the IEnumerable interface:
         You need to result right away and are possibly mutating / editing the objects later on.
         In this case, it is better to use an Array or a List.
      */

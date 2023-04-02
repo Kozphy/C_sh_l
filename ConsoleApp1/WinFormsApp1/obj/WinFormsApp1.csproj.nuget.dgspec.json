@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\zixsa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zixsa\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\dbdf0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbdf0\\source\\repos\\C_sh_l\\ConsoleApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\zixsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dbdf0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,13 +1,15 @@
 using static System.Console;
 
-namespace fib;
-public class fib_set {
+namespace ConsoleApp2.algo;
+public class fib_set
+{
     public static void Start()
     {
         fib_execute();
     }
 
-    private static void fib_execute(){
+    private static void fib_execute()
+    {
         WriteLine("using recursive with fib");
         Write("Please input integer: ");
         int num;
@@ -22,21 +24,25 @@ public class fib_set {
 
     static int fac(int n)
     {
-        if (n == 1){
-            return  1;
+        if (n == 1)
+        {
+            return 1;
         }
-        return n * fac(n-1);
+        return n * fac(n - 1);
     }
 
     static int fib_n_sum(int n)
     {
-        if (n==0){
+        if (n == 0)
+        {
             return 0;
-        }else if(n==1){
+        }
+        else if (n == 1)
+        {
             return 1;
         }
-        // 2 -> [1,0], 1
-        return fib_n_sum(n-1) + fib_n_sum(n-2);
+        //input 3: return 2 -> [1,0] + 1
+        return fib_n_sum(n - 1) + fib_n_sum(n - 2);
     }
 
 }
