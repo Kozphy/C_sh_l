@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="practice\collection_p\" />
+  </ItemGroup>
+
 </Project>

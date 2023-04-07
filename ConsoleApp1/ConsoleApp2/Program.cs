@@ -9,6 +9,7 @@ using ConsoleApp2.practice.Enumerate_p;
 using ConsoleApp2.practice.linq_p;
 using ConsoleApp2.codewar;
 using ConsoleApp2.algo;
+using ConsoleApp2.practice;
 
 namespace ConsoleApp2
 {
@@ -20,8 +21,10 @@ namespace ConsoleApp2
             //select_many.SetectManyEx();
             //BouncingBall.Start();
             //fib_set.Start();
-            var res = fib_dpa.fib(3);
-            Console.WriteLine(res);
+            //var res = fib_dpa.fib(3);
+            //Console.WriteLine(res);
+            Unique_in_order.Start();
+            Yield.Start();
 
         }
     }
