@@ -5,15 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2.practice.poly
+namespace ConsoleApp2.practice.poly.has_a
 {
-    internal class Audi:Car
+    internal class Audi : Car
     {
         private string brand = "Audi";
         public string Model { get; set; }
-        public Audi(int hp, string color, string model) : base(hp, color)
+        public Audi(int hp, string color, string model)
         {
-            this.Model = model;
+            HP = hp;
+            Color = color;
+            Model = model;
         }
 
         public void ShowDetails()

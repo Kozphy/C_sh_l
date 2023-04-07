@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2.practice.Enumerate_p
+namespace ConsoleApp2.practice.Enumerate_p.shelter
 {
     //<summary> 
     // IEnumerable <T> contains a single method that you must implement when implementing this interface;

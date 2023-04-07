@@ -6,10 +6,15 @@ using ConsoleApp2.practice.abstract_p;
 using ConsoleApp2.practice.Interface_p;
 using ConsoleApp2.practice.Inheritence_p;
 using ConsoleApp2.practice.Enumerate_p;
+<<<<<<< HEAD
 using ConsoleApp2.practice.linq_p;
 using ConsoleApp2.codewar;
 using ConsoleApp2.algo;
 using ConsoleApp2.practice;
+=======
+using ConsoleApp2.practice.poly.para;
+using ConsoleApp2.practice.poly;
+>>>>>>> 00a11085b90aaa26c250ed93d33b52b54bbcdb1f
 
 namespace ConsoleApp2
 {
@@ -25,6 +30,7 @@ namespace ConsoleApp2
             //Console.WriteLine(res);
             Unique_in_order.Start();
             Yield.Start();
+
 
         }
     }

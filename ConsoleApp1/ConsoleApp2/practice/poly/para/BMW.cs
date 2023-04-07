@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2.practice.poly
+namespace ConsoleApp2.practice.poly.para
 {
-    internal class BMW:Car
+    internal class BMW : Car
     {
         private string brand = "BMW";
         public string Model { get; set; }
-        public BMW(int hp, string color, string model) :base(hp, color)
+        public BMW(int hp, string color, string model)
         {
-           this.Model = model;
+            HP = hp;
+            Color = color;
+            Model = model;
         }
 
         public void ShowDetails()
