@@ -6,9 +6,8 @@ using ConsoleApp2.practice.abstract_p;
 using ConsoleApp2.practice.Interface_p;
 using ConsoleApp2.practice.Inheritence_p;
 using ConsoleApp2.practice.Enumerate_p;
-using ConsoleApp2.practice.linq_p;
-using ConsoleApp2.codewar;
-using ConsoleApp2.algo;
+using ConsoleApp2.practice.poly.para;
+using ConsoleApp2.practice.poly;
 
 namespace ConsoleApp2
 {
@@ -22,6 +21,7 @@ namespace ConsoleApp2
             //fib_set.Start();
             var res = fib_dpa.fib(3);
             Console.WriteLine(res);
+
 
         }
     }

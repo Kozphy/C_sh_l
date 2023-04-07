@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp2.practice.poly.has_a;
 
 namespace ConsoleApp2.practice.poly
 {
@@ -10,18 +11,31 @@ namespace ConsoleApp2.practice.poly
     {
         public int HP { get; set; }
         public string Color { get; set; }
-        public Car(int hp, string color) {
-            this.HP = hp;
-            this.Color = color;
-        }
-        public void ShowDetails()
+
+        // has a relationship
+        protected CarIDInfo carIDInfo = new CarIDInfo();
+
+        public void SetCarIDInfo(int idnum, string owner)
         {
-            Console.WriteLine("HP: " + HP + "color:" + Color);
+            carIDInfo = new CarIDInfo(idnum, owner);
         }
 
-        public void Repair()
+        public void GetCarIDInfo()
         {
-            Console.WriteLine("Car was repaired.");
+            Console.WriteLine("The car has the ID of {0} and is owned by {1}", carIDInfo.IDNum, carIDInfo.Owner);
         }
+
+        public Car() { }
+
+        public void ShowDetails()
+        {
+            Console.WriteLine("HP: " + HP + "Color: " + Color);
+        }
+
+        public virtual void Repair()
+        {
+            Console.WriteLine("Car was repaired");
+        }
+
     }
 }
