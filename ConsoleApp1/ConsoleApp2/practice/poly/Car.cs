@@ -27,9 +27,14 @@ namespace ConsoleApp2.practice.poly
 
         public Car() { }
 
-        public void ShowDetails()
+        public Car(int hp, string color) { 
+            this.HP = hp;
+            this.Color = color;
+        }
+
+        public void  ShowDetails()
         {
-            Console.WriteLine("HP: " + HP + "Color: " + Color);
+            Console.WriteLine("HP: " + HP + " Color: " + Color);
         }
 
         public virtual void Repair()

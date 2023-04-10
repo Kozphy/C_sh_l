@@ -6,15 +6,18 @@ using ConsoleApp2.practice.abstract_p;
 using ConsoleApp2.practice.Interface_p;
 using ConsoleApp2.practice.Inheritence_p;
 using ConsoleApp2.practice.Enumerate_p;
-<<<<<<< HEAD
 using ConsoleApp2.practice.linq_p;
 using ConsoleApp2.codewar;
 using ConsoleApp2.algo;
 using ConsoleApp2.practice;
-=======
 using ConsoleApp2.practice.poly.para;
 using ConsoleApp2.practice.poly;
->>>>>>> 00a11085b90aaa26c250ed93d33b52b54bbcdb1f
+using ConsoleApp2.practice.Enumerate_p.example_2;
+using ConsoleApp2.practice.Enumerate_p.PhoneBook_p;
+using ConsoleApp2.practice.debug_p;
+using ConsoleApp2.practice.Struct_p;
+using ConsoleApp2.practice.Enums_p;
+using ConsoleApp2.practice.regu;
 
 namespace ConsoleApp2
 {
@@ -23,15 +26,15 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            //select_many.SetectManyEx();
-            //BouncingBall.Start();
-            //fib_set.Start();
-            //var res = fib_dpa.fib(3);
-            //Console.WriteLine(res);
-            Unique_in_order.Start();
-            Yield.Start();
+            //Start_example_2.Start();
+            //phone_book_start.PhoneBook.Start();
 
+            //debug_start.Start();
 
+            //Start_para.Start();
+            //struct_start.Start();
+            //Enum_start.Start();
+            regex_start.Start();
         }
     }
 }

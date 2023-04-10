@@ -11,18 +11,17 @@ namespace ConsoleApp2.practice.poly.para
     {
         private string brand = "Audi";
         public string Model { get; set; }
-        public Audi(int hp, string color, string model)
+        public Audi(int hp, string color, string model):base(hp, color)
         {
-            HP = hp;
-            Color = color;
-            Model = model;
+            this.Model = model;
         }
 
-        public void ShowDetails()
+        // new keyword means: if you create new object of me, then override parent function
+        public new void ShowDetails()
         {
             Console.WriteLine("Brand: " + brand + "HP: " + HP + "Color: " + Color);
         }
-        public void Repair()
+        public override void Repair()
         {
             Console.WriteLine($"Model {Model} was repaired");
         }

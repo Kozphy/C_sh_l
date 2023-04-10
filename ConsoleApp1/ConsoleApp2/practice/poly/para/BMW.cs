@@ -10,18 +10,16 @@ namespace ConsoleApp2.practice.poly.para
     {
         private string brand = "BMW";
         public string Model { get; set; }
-        public BMW(int hp, string color, string model)
+        public BMW(int hp, string color, string model):base(hp, color)
         {
-            HP = hp;
-            Color = color;
-            Model = model;
+            this.Model = model;
         }
 
-        public void ShowDetails()
+        public new void ShowDetails()
         {
-            Console.WriteLine("Brand: " + brand + "HP: " + HP + "Color: " + Color);
+            Console.WriteLine("Brand: " + brand + " HP: " + HP + " Color: " + Color);
         }
-        public void Repair()
+        public override void Repair()
         {
             Console.WriteLine($"Model {Model} was repaired");
         }
