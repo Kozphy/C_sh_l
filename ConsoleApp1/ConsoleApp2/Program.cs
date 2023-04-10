@@ -26,15 +26,16 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            //Start_example_2.Start();
-            //phone_book_start.PhoneBook.Start();
+            //select_many.SetectManyEx();
+            //BouncingBall.Start();
+            //fib_set.Start();
+            //var res = fib_dpa.fib(3);
+            //Console.WriteLine(res);
+            Unique_in_order.Start();
+            Yield.Start();
 
             //debug_start.Start();
 
-            //Start_para.Start();
-            //struct_start.Start();
-            //Enum_start.Start();
-            regex_start.Start();
         }
     }
 }
