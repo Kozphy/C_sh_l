@@ -77,20 +77,6 @@ app.UseRouting();
 //         await context.Response.WriteAsync($"In Employee profile - {employName}");
 //     });
 
-<<<<<<< HEAD
-    endpoints.Map("products/details/{id:int?}", async context =>
-    {
-        if (context.Request.RouteValues.ContainsKey("id"))
-        {
-            string? id = Convert.ToString(context.Request.RouteValues["id"]);
-            await context.Response.WriteAsync($"Products details - {id}");
-        }
-        else {
-            await context.Response.WriteAsync($"Products details - id is not supplied");
-        }
-    });
-});
-=======
 //     endpoints.Map("products/details/{id:int?}", async context =>
 //     {
 //         if (context.Request.RouteValues.ContainsKey("id"))
@@ -103,7 +89,6 @@ app.UseRouting();
 //         }
 //     });
 // });
->>>>>>> 9c1e72c61bbc09ee33672d985ab231a205b2576d
 
 // app.UseEndpoints(endpoints =>
 // {
