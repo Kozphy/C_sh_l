@@ -50,7 +50,7 @@ namespace ConsoleApp2.practice.Enumerate_p.shelter
 
         public Dog(string name, bool IsNaughtyDog)
         {
-            Name = name;
+            this.Name = name;
             this.IsNaughtyDog = IsNaughtyDog;
         }
 

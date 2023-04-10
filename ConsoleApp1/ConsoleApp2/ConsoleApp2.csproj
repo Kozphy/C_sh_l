@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="practice\collection_p\" />
+    <Folder Include="practice\NewFolder\" />
   </ItemGroup>
 
 </Project>
