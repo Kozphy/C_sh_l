@@ -11,6 +11,8 @@ using ConsoleApp2.practice.poly;
 using ConsoleApp2.practice.linq_p;
 using ConsoleApp2.practice.datetime_p;
 using ConsoleApp2.practice.nullable_p;
+using ConsoleApp2.practice.Main_p;
+using ConsoleApp2.practice.event_delegate_p;
 
 namespace ConsoleApp2
 {
@@ -19,32 +21,14 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            //datetime_start.Start();
-            //nullable_start.Start();
-            explain_Main_start(args);
+            // datetime_start.Start();
+            // nullable_start.Start();
+            // explain_Main_start(args);
+            // main.Start(args);
+            event_delegate.Start();
+
         }
 
-        static void explain_Main_start(string[] args)
-        {
-            if (args.Length == 0) 
-            {
-                Console.WriteLine("Please input args");
-                return;
-            }
-
-            bool isNum1Parsed = float.TryParse(args[0], out float num1);
-            bool isNum2Parsed = float.TryParse(args[1], out float num2);
-
-            if(!isNum1Parsed || !isNum2Parsed)
-            {
-                Console.WriteLine("Invalid arguments, please use the help command for instructions");
-                Console.ReadKey();
-                return;
-            }
-
-            Console.WriteLine("Hello " + args[0]);
-            Console.WriteLine(args[1]);
-            Console.ReadKey();
-        }
+        
     }
 }
