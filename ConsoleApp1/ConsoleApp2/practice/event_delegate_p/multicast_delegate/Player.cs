@@ -13,14 +13,16 @@ namespace  ConsoleApp2.practice.event_delegate_p.multicast_delegate
        public Player(string name) 
        {
             this._PlayerName = name;
+            GameEventManager.OnGameStart += StartGame;
+            GameEventManager.OnGameEnd += GameOver;
        }
 
-        public void StartGame()
+        private void StartGame()
         {
             System.Console.WriteLine($"Spawning Player with ID: {_PlayerName}");
         }
 
-        public void GameOver()
+        private void GameOver()
         {
             System.Console.WriteLine($"Removing Player with ID: {_PlayerName}");
         }

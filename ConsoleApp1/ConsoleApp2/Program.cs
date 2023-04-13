@@ -13,6 +13,8 @@ using ConsoleApp2.practice.datetime_p;
 using ConsoleApp2.practice.nullable_p;
 using ConsoleApp2.practice.Main_p;
 using ConsoleApp2.practice.event_delegate_p;
+using ConsoleApp2.practice.event_delegate_p.multicast_delegate;
+using ConsoleApp2.practice.poly.read_write_file;
 
 namespace ConsoleApp2
 {
@@ -25,7 +27,10 @@ namespace ConsoleApp2
             // nullable_start.Start();
             // explain_Main_start(args);
             // main.Start(args);
-            event_delegate.Start();
+            //event_delegate.Start();
+            //event_and_multicast_delegate.Start();
+            Start_file.Start();
+            
 
         }
 
