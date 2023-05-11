@@ -5,22 +5,32 @@ using MvcMovie.CustomMiddleware;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
+using System.Drawing.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<MyCustomMiddleware>();
 
 // need refactor
 Dictionary<string, string?> connectStringsCollection = new Dictionary<string, string?>();
-connectStringsCollection.Add("laptopMvcMovieContext", builder.Configuration.GetConnectionString("laptopMvcMovieContext"));
-connectStringsCollection.Add("laptopProductionMvcMovieContext", builder.Configuration.GetConnectionString("laptopMvcMovieContext"));
+connectStringsCollection.Add("laptopMvcMovieContext", builder.Configuration.GetConnectionString("MSSQL"));
+connectStringsCollection.Add("laptopProductionMvcMovieContext", builder.Configuration.GetConnectionString("MSSQL"));
+connectStringsCollection.Add("desktopMvcMovieContext", builder.Configuration.GetConnectionString("MSSQL"));
+connectStringsCollection.Add("desktopProductionMvcMovieContext", builder.Configuration.GetConnectionString("MSSQL"));
+
 
 var computerType = builder.Configuration.GetSection("laptop");
-if(Convert.ToBoolean(computerType["mobile_tablet"])){
+//var logger = new Logger();
+if (Convert.ToBoolean(computerType["mobile_tablet"]))
+{
     if (builder.Environment.IsDevelopment())
     {
-        // In dev using SQLite
         builder.Services.AddDbContext<MvcMovieContext>(options =>
-            options.UseSqlite(connectStringsCollection["laptopMvcMovieContext"]!));
+            options.UseSqlServer(connectStringsCollection["laptopMvcMovieContext"]!));
+
+        // TODO:
+        Console.WriteLine(connectStringsCollection["laptopMvcMovieContext"]);
+        //Logger.LogInfomation(connectStringsCollection["laptopMvcMoviceContext"])
     }
     else
     {
@@ -28,12 +38,14 @@ if(Convert.ToBoolean(computerType["mobile_tablet"])){
         builder.Services.AddDbContext<MvcMovieContext>(options =>
             options.UseSqlServer(connectStringsCollection["laptopProductionMvcMovieContext"]!));
     }
-}else {
+}
+else
+{
     if (builder.Environment.IsDevelopment())
     {
         // In dev using SQLite
         builder.Services.AddDbContext<MvcMovieContext>(options =>
-            options.UseSqlite(connectStringsCollection["desktopMvcMovieContext"]!));
+            options.UseSqlServer(connectStringsCollection["desktopMvcMovieContext"]!));
     }
     else
     {
@@ -132,11 +144,14 @@ app.MapControllerRoute(
 //            await next();
 //        });
 //    }
+
 //);
 
-//app.Use(async (HttpContext context, RequestDelegate next) =>
-//    await context.Response.WriteAsync("Hello from main middleware.")
-//); 
+
+//app.Use(async (HttpContext context, RequestDelegate next) => { 
+    //await context.Response.WriteAsync("Hello from main middleware.");
+//    await next(context);
+//});
 
 // middleware 2
 //app.UseMiddleware<MyCustomMiddleware>();
@@ -144,13 +159,14 @@ app.MapControllerRoute(
 
 // conventional middleware
 //app.UseConventional_middleware();
+//app.UseGetParametersMiddleware();
 
 // middleware 3
-app.Use(async (HttpContext context, RequestDelegate next) =>
-{
-   await context.Response.WriteAsync(Directory.GetCurrentDirectory() + "\r\n");
-   await next(context);
-});
+//app.Use(async (HttpContext context, RequestDelegate next) =>
+//{
+//    await context.Response.WriteAsync(Directory.GetCurrentDirectory() + "\r\n");
+//    await next(context);
+//});
 
 // IConfiguration configuration = new ConfigurationBuilder()
 //     .SetBasePath(Directory.GetCurrentDirectory())
@@ -159,26 +175,29 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
 
 // var env = configuration.GetValue<string>("ConnectionStrings");
 
-app.Use(async (HttpContext context, RequestDelegate next) =>
-{
-    var env = builder.Configuration.GetSection("laptop");
-    if(Convert.ToBoolean(env["mobile_tablet"])){
+// middleware check computer device
+//app.Use(async (HttpContext context, RequestDelegate next) =>
+//{
+//    var envDevice = builder.Configuration.GetSection("laptop");
+//    if (Convert.ToBoolean(envDevice["mobile_tablet"]))
+//    {
 
-        await context.Response.WriteAsync(env["mobile_tablet"]!);
-        await context.Response.WriteAsync("laptop env");
-    }else
-    {
-        await context.Response.WriteAsync(env["mobile_tablet"]!);
-        await context.Response.WriteAsync("not laptop env");
-    }
-});
+//        await context.Response.WriteAsync(envDevice["mobile_tablet"]! + "\r\n");
+//        await context.Response.WriteAsync("laptop env");
+//    }
+//    else
+//    {
+//        await context.Response.WriteAsync(envDevice["mobile_tablet"]! + "\r\n");
+//        await context.Response.WriteAsync("not laptop env");
+//    }
+
+//});
 
 
-// app.Run(async context =>
-// {
-//     await context.Response.WriteAsync($"Request received at {context.Request.Path}");
-// }
-// );
-
+//app.Run(async context =>
+//    {
+//        await context.Response.WriteAsync($"Request received at {context.Request.Path}");
+//    }
+//);
 
 app.Run();

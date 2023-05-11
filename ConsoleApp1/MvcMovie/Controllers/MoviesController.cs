@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +21,9 @@ namespace MvcMovie.Controllers
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Movie.ToListAsync());
+              return _context.Movie != null ? 
+                          View(await _context.Movie.ToListAsync()) :
+                          Problem("Entity set 'MvcMovieContext.Movie'  is null.");
         }
 
         // GET: Movies/Details/5
@@ -154,7 +156,7 @@ namespace MvcMovie.Controllers
 
         private bool MovieExists(int id)
         {
-          return _context.Movie.Any(e => e.Id == id);
+          return (_context.Movie?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
