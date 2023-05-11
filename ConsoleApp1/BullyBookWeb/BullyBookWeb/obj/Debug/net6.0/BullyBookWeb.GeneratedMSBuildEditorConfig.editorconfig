@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BullyBookWeb
 build_property.RootNamespace = BullyBookWeb
-build_property.ProjectDir = c:\Users\zixsa\source\repos\C_sh_l\ConsoleApp1\BullyBookWeb\BullyBookWeb\
+build_property.ProjectDir = C:\Users\dbdf0\source\repos\C_sh_l\ConsoleApp1\BullyBookWeb\BullyBookWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\zixsa\source\repos\C_sh_l\ConsoleApp1\BullyBookWeb\BullyBookWeb
+build_property.MSBuildProjectDirectory = C:\Users\dbdf0\source\repos\C_sh_l\ConsoleApp1\BullyBookWeb\BullyBookWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Create.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Delete.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Details.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Edit.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Index.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Home/Index.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Home/Privacy.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Shared/Error.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/_ViewImports.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/_ViewStart.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/zixsa/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/dbdf0/source/repos/C_sh_l/ConsoleApp1/BullyBookWeb/BullyBookWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q11g89ib9x

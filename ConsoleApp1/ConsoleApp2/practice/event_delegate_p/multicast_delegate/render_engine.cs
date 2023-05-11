@@ -2,7 +2,7 @@ using System;
 
 namespace  ConsoleApp2.practice.event_delegate_p.multicast_delegate
 {
-    public class renderEngine{
+    public class RenderEngine{
         public void StartGame()
         {
             System.Console.WriteLine("Render Engine Started");

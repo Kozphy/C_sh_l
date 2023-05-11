@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMov
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BullyBookWeb", "BullyBookWeb\BullyBookWeb\BullyBookWeb.csproj", "{3B978D96-04B2-4091-9200-F53A8D30C42C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test_react", "test_react\test_react.csproj", "{CF919B21-16FF-484C-AC25-C5D223B38DDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3B978D96-04B2-4091-9200-F53A8D30C42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B978D96-04B2-4091-9200-F53A8D30C42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B978D96-04B2-4091-9200-F53A8D30C42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF919B21-16FF-484C-AC25-C5D223B38DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF919B21-16FF-484C-AC25-C5D223B38DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF919B21-16FF-484C-AC25-C5D223B38DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF919B21-16FF-484C-AC25-C5D223B38DDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
