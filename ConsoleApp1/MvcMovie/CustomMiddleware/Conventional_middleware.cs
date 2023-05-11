@@ -22,7 +22,9 @@ namespace MvcMovie.CustomMiddleware
             {
                 string fullName = httpContext.Request.Query["firstname"] + " " +
                 httpContext.Request.Query["lastname"];
-                await httpContext.Response.WriteAsync(fullName);
+                //await httpContext.Response.WriteAsync(fullName);
+                httpContext.Items["fullName"] = fullName;
+                //Console.WriteLine(fullName);
             }
             await _next(httpContext);
             // after logic

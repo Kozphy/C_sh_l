@@ -174,35 +174,5 @@ namespace Lab0509
             Console.WriteLine($"平均溫度為 {avg:F2}");
         }
 
-        static void P22_終極密碼() 
-        {
-            Random rnd = new Random();
-            int ans = rnd.Next(1, 101);
-            Console.WriteLine(ans);
-            int start = 1;
-            int end = 100;
-            Console.WriteLine($"請輸入，{start}~{end}之間的數值");
-            int input = int.Parse(Console.ReadLine());
-            int num = 1;
-
-            while (ans != input) {
-                if (ans > input) {
-                    Console.WriteLine($"介於 {input} 和 {end} ");
-                    start = input;
-                    Console.WriteLine($"請輸入，{start}~{end}之間的數值");
-                }
-                else if (ans < input) {
-                    Console.WriteLine($"介於 {start} 和 {input} ");
-                    end = input;
-                    Console.WriteLine($"請輸入，{start}~{end}之間的數值");
-                }
-                num += 1;
-
-                input = int.Parse(Console.ReadLine());
-            }
-
-            Console.WriteLine($"答案為 {ans}，恭喜答對(猜了 {num} 次)");
-
-        }
     }
 }

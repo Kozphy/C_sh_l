@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc;
 using MvcMovie.Models;
 
