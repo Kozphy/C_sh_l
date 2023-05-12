@@ -7,9 +7,32 @@ using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using System.Drawing.Text;
+using Serilog;
+using Azure.Identity;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using MvcMovie.logger;
+
+//using System.Environment.NewLine;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<MyCustomMiddleware>();
+
+// Logging
+
+// Serilog
+StackTrace st = new StackTrace(true);
+using var log = new LoggerConfiguration()
+    .WriteTo.Console(outputTemplate:
+        "[{Timestamp:HH:mm:ss} {fileName}:{lineNum} {Level:u3}] {Message:lj}   {NewLine}{Exception} ")
+    .CreateLogger();
+
+Log.Logger = log;
+
+
+//builder.Host.UseSerilog((HttpBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) => { 
+//})
+
 
 // need refactor
 Dictionary<string, string?> connectStringsCollection = new Dictionary<string, string?>();
@@ -27,9 +50,10 @@ if (Convert.ToBoolean(computerType["mobile_tablet"]))
     {
         builder.Services.AddDbContext<MvcMovieContext>(options =>
             options.UseSqlServer(connectStringsCollection["laptopMvcMovieContext"]!));
-
+        
         // TODO:
-        Console.WriteLine(connectStringsCollection["laptopMvcMovieContext"]);
+        log.Here().Information(connectStringsCollection["laptopMvcMovieContext"]);
+
         //Logger.LogInfomation(connectStringsCollection["laptopMvcMoviceContext"])
     }
     else
