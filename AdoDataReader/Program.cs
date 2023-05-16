@@ -156,7 +156,7 @@ namespace AdoDataReader
                     cmd.Cancel();
                 }
             }
-
         }
+
     }
 }
