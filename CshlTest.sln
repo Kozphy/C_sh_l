@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test_react", "learnProject\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilelOc", "FilelOc\FilelOc.csproj", "{50CB3DD5-F337-4CA0-ABEA-5808C24B10C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersExample", "ControllersExample\ControllersExample.csproj", "{E6F116E0-F27A-4D7B-8DFB-A84C5BB25C53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllersExample", "ControllersExample\ControllersExample.csproj", "{E6F116E0-F27A-4D7B-8DFB-A84C5BB25C53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDataReader", "AdoDataReader\AdoDataReader.csproj", "{7D0C5696-16E6-43BA-8410-242BBF958618}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoDataReader", "AdoDataReader\AdoDataReader.csproj", "{7D0C5696-16E6-43BA-8410-242BBF958618}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +59,10 @@ Global
 		{E6F116E0-F27A-4D7B-8DFB-A84C5BB25C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6F116E0-F27A-4D7B-8DFB-A84C5BB25C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6F116E0-F27A-4D7B-8DFB-A84C5BB25C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D0C5696-16E6-43BA-8410-242BBF958618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0C5696-16E6-43BA-8410-242BBF958618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0C5696-16E6-43BA-8410-242BBF958618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0C5696-16E6-43BA-8410-242BBF958618}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
