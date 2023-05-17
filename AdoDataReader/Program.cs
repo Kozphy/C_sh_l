@@ -20,8 +20,10 @@ namespace AdoDataReader
                     configuration.Sources.Clear();
                     IHostEnvironment env = hostingContext.HostingEnvironment;
                     var configFilePath = Path.Combine(DirectoryProvider.TrySlnDirectory().FullName, "AdoDataReader", "appsettings.json");
+                    var configXmlFilePath = Path.Combine(DirectoryProvider.TrySlnDirectory().FullName, "AdoDataReader", "App.config");
 
                     configuration.AddJsonFile(configFilePath, optional: false, reloadOnChange: true);
+                    configuration.AddXmlFile(configXmlFilePath, optional: false);
 
                     IConfigurationRoot configurationRoot = configuration.Build();
                 }
@@ -30,11 +32,24 @@ namespace AdoDataReader
             IConfiguration config = host.Services.GetRequiredService<IConfiguration>();
             //Console.WriteLine(config.GetConnectionString("MSSQL"));
             string? connStrings = config.GetConnectionString("MSSQL");
+            //Console.WriteLine(connStrings);
+            //Console.WriteLine("pubs {0}", config.GetConnectionString("add:pubs:connectionString"));
+            //foreach (var i in ConfigurationExtensions.AsEnumerable(config)) {
+            //    Console.WriteLine(i.Key);
+            //    Console.WriteLine(i.Value);
+            //}
+            //Console.WriteLine(config.GetConnectionString("pubs"));
+            //Console.WriteLine(config.GetChildren());
+            //foreach (IEnumerable i in config.GetChildren()) {
+            //    Console.WriteLine(i);
+            //}
+
             //Page_Load(connStrings);
             //Exec_Stored_Procedure(connStrings);
             //Exec_NextResult(connStrings);
             //Exec_Depth(connStrings);
-            Exec_FieldCount(connStrings);
+            //Exec_FieldCount(connStrings);
+            Exec_RecordsAffected(connStrings);
         }
 
         protected static void Page_Load(string? connStrings)
@@ -155,6 +170,20 @@ namespace AdoDataReader
                     }
                     cmd.Cancel();
                 }
+            }
+        }
+
+        protected static void Exec_RecordsAffected(string connStrings) {
+            string queryString = "Update Employees set City='Seattle' where EmployeeID=1";
+            using (SqlConnection Conn = new SqlConnection(connStrings)) {
+                Conn.Open();
+                SqlCommand cmd = new SqlCommand(queryString, Conn);
+                int RecordsAffected = cmd.ExecuteNonQuery();
+                Console.WriteLine("execute Update's Sql cmd, affect " + RecordsAffected + " records.");
+                if (RecordsAffected > 0) {
+                    Console.WriteLine("data have affected。total: " + RecordsAffected + " row record is affected");
+                }
+                cmd.Cancel();
             }
         }
 
