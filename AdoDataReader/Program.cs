@@ -20,8 +20,10 @@ namespace AdoDataReader
                     configuration.Sources.Clear();
                     IHostEnvironment env = hostingContext.HostingEnvironment;
                     var configFilePath = Path.Combine(DirectoryProvider.TrySlnDirectory().FullName, "AdoDataReader", "appsettings.json");
+                    var configXmlFilePath = Path.Combine(DirectoryProvider.TrySlnDirectory().FullName, "AdoDataReader", "App.config");
 
                     configuration.AddJsonFile(configFilePath, optional: false, reloadOnChange: true);
+                    configuration.AddXmlFile(configXmlFilePath, optional: false);
 
                     IConfigurationRoot configurationRoot = configuration.Build();
                 }
@@ -30,12 +32,24 @@ namespace AdoDataReader
             IConfiguration config = host.Services.GetRequiredService<IConfiguration>();
             //Console.WriteLine(config.GetConnectionString("MSSQL"));
             string? connStrings = config.GetConnectionString("MSSQL");
+            //Console.WriteLine(connStrings);
+            //Console.WriteLine("pubs {0}", config.GetConnectionString("add:pubs:connectionString"));
+            //foreach (var i in ConfigurationExtensions.AsEnumerable(config)) {
+            //    Console.WriteLine(i.Key);
+            //    Console.WriteLine(i.Value);
+            //}
+            //Console.WriteLine(config.GetConnectionString("pubs"));
+            //Console.WriteLine(config.GetChildren());
+            //foreach (IEnumerable i in config.GetChildren()) {
+            //    Console.WriteLine(i);
+            //}
+
             //Page_Load(connStrings);
             //Exec_Stored_Procedure(connStrings);
             //Exec_NextResult(connStrings);
             //Exec_Depth(connStrings);
             //Exec_FieldCount(connStrings);
-            Exec_HasRows(connStrings);
+            Exec_RecordsAffected(connStrings);
         }
 
         protected static void Page_Load(string? connStrings)
@@ -136,40 +150,42 @@ namespace AdoDataReader
             }
         }
 
-        protected static void Exec_HasRows(string? connStrings)
-        {
-            string queryString = "select * from authors where au_lname = @au_lname and au_fname=@au_fname";
-            string au_name = "White";
-            string au_fname = "Johnson";
-            try { 
-                using(SqlConnection Conn = new SqlConnection(connStrings)) { 
-                    Conn.Open();
-                    SqlCommand cmd = new SqlCommand(queryString, Conn);
-                    cmd.Parameters.Add("@au_lname", SqlDbType.VarChar, 40);
-                    cmd.Parameters["@au_lname"].Value = au_name;
-                    cmd.Parameters.Add("@au_fname", SqlDbType.VarChar, 20);
-                    cmd.Parameters["@au_fname"].Value = au_fname;
-                    using (SqlDataReader dr = cmd.ExecuteReader())
+        protected static void Exec_HasRows(string? connStrings) { 
+            string queryString = "select * from authors";
+            using(SqlConnection Conn = new SqlConnection(connStrings)) { 
+                Conn.Open();
+                SqlCommand cmd = new SqlCommand(queryString, Conn);
+                var table = new ConsoleTable();
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    Console.WriteLine($"how many total column does table have?\t {dr.FieldCount.ToString()}");
+
+                    while (dr.Read())
                     {
-                        if (dr.HasRows) {
-                            while (dr.Read()) { 
-                                for (int i = 0; i< dr.FieldCount; i++) {
-                                    Console.Write(dr[i].ToString() + "\t");
-                                }
-                            }
-                        }
-                        else
+                        for (int i = 0; i < dr.FieldCount; i++)
                         {
-                            Console.WriteLine($"Not found au_name={au_name} and au_fname={au_fname} in mssql");
+                            Console.Write(dr[i].ToString() + "\t");
                         }
-                        cmd.Cancel();
+                        Console.WriteLine();
                     }
+                    cmd.Cancel();
                 }
             }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex);
+        }
+
+        protected static void Exec_RecordsAffected(string connStrings) {
+            string queryString = "Update Employees set City='Seattle' where EmployeeID=1";
+            using (SqlConnection Conn = new SqlConnection(connStrings)) {
+                Conn.Open();
+                SqlCommand cmd = new SqlCommand(queryString, Conn);
+                int RecordsAffected = cmd.ExecuteNonQuery();
+                Console.WriteLine("execute Update's Sql cmd, affect " + RecordsAffected + " records.");
+                if (RecordsAffected > 0) {
+                    Console.WriteLine("data have affected。total: " + RecordsAffected + " row record is affected");
+                }
+                cmd.Cancel();
             }
         }
+
     }
 }
