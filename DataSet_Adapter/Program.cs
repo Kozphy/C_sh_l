@@ -1,4 +1,4 @@
-namespace SqlCmd_Ado.NET
+namespace DataSet_Adapter
 {
     internal static class Program
     {
@@ -11,9 +11,7 @@ namespace SqlCmd_Ado.NET
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new ExecuteReader());
-            //Application.Run(new drCommandBehavior());
-            Application.Run(new ExecuteNonQuery());
+            Application.Run(new DBInit());
         }
     }
 }

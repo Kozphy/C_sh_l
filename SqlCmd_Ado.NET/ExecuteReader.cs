@@ -3,10 +3,10 @@ using System.Data.SqlClient;
 
 namespace SqlCmd_Ado.NET
 {
-    public partial class Form1 : Form
+    public partial class ExecuteReader : Form
     {
         string connStr = Properties.Settings.Default.northwind;
-        public Form1()
+        public ExecuteReader()
         {
             InitializeComponent();
         }
@@ -22,7 +22,6 @@ namespace SqlCmd_Ado.NET
                 conn.Open();
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
-
                     var dt = new DataTable();
                     dt.Load(dr);
                     dataGridView1.DataSource = dt;
@@ -34,7 +33,6 @@ namespace SqlCmd_Ado.NET
             {
                 Console.WriteLine(ex.ToString());
             }
-
         }
     }
 }

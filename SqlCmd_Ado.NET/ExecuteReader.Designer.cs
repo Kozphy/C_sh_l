@@ -1,6 +1,6 @@
 ﻿namespace SqlCmd_Ado.NET
 {
-    partial class Form1
+    partial class ExecuteReader
     {
         /// <summary>
         ///  Required designer variable.
