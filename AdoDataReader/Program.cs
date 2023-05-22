@@ -52,7 +52,8 @@ namespace AdoDataReader
             //Exec_FieldCount(connStrings);
             //Exec_RecordsAffected(connStrings);
             //Exec_GetName(connStrings); 
-            Exec_GetValue(connStrings);
+            //Exec_GetValue(connStrings);
+            Exec_GetValues(connStrings);
         }
 
         protected static void Page_Load(string? connStrings)
@@ -246,7 +247,7 @@ namespace AdoDataReader
                     for (int i = 0; i < dr.FieldCount; i++)
                     {
                         Console.Write(dr.GetName(i).ToString() + "\t");
-                        // 回傳 System.Object，代表隊 null 的資料行，會傳回 DBNull
+                        // 回傳 System.Object，代表對 null 的資料行，會傳回 DBNull
                         Console.Write(dr.GetValue(i).ToString() + "\r\n");
                     }
                     Console.WriteLine();
@@ -258,10 +259,26 @@ namespace AdoDataReader
         // 6-16
         protected static void Exec_GetValues(string connStrings)
         {
+            SqlDataReader dr = null;
+            using (SqlConnection Conn = new SqlConnection(connStrings))
+            {
+                try { 
+                    Conn.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Region", Conn);
+                    dr = cmd.ExecteReader();
+                    while (dr.Read()) { 
+                        object[] values = new object[dr.FieldCount - 1];
+                        int return_fieldCount = dr.GetValues(values);
+                        Console.WriteLine(return_fieldCount);
+
+                        for(int i = 0; i<= (return_fieldCount - 1); i++) { 
+                            dr.GetName(i).ToString();
+                        }
+
+                    }
+                }
+            }
 
         }
-
-        
-
     }
 }
