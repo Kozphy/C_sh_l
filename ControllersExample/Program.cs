@@ -1,3 +1,5 @@
+using ControllersExample.Controllers;
+
 namespace ControllersExample
 {
     public class Program
@@ -5,9 +7,19 @@ namespace ControllersExample
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllers();
+            //builder.Services.AddTransient<HomeController>();
+
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");
+            app.UseRouting();
+            app.MapControllers();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllers();
+            //});
+
+            //app.MapGet("/", () => "Hello World!");
 
             app.Run();
         }

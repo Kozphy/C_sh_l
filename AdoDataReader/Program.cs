@@ -8,6 +8,9 @@ using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
 using ConsoleTables;
 using System.Collections;
+using System.Security.Cryptography.Xml;
+using System.Xml;
+using System.Net.Http.Headers;
 
 namespace AdoDataReader
 {
@@ -53,7 +56,9 @@ namespace AdoDataReader
             //Exec_RecordsAffected(connStrings);
             //Exec_GetName(connStrings); 
             //Exec_GetValue(connStrings);
-            Exec_GetValues(connStrings);
+            //Exec_GetValues(connStrings);
+            //Exec_GetOrdinal(connStrings);
+            Exec_IsDbNull(connStrings);
         }
 
         protected static void Page_Load(string? connStrings)
@@ -260,25 +265,92 @@ namespace AdoDataReader
         protected static void Exec_GetValues(string connStrings)
         {
             SqlDataReader dr = null;
-            using (SqlConnection Conn = new SqlConnection(connStrings))
+            SqlConnection Conn = new SqlConnection(connStrings);
+            SqlCommand cmd = new SqlCommand("select * from Categories", Conn);
+            try
             {
-                try { 
-                    Conn.Open();
-                    SqlCommand cmd = new SqlCommand("select * from Region", Conn);
-                    dr = cmd.ExecteReader();
-                    while (dr.Read()) { 
-                        object[] values = new object[dr.FieldCount - 1];
-                        int return_fieldCount = dr.GetValues(values);
-                        Console.WriteLine(return_fieldCount);
+                Conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Object[] values = new object[dr.FieldCount];
+                    int return_fieldCount = dr.GetValues(values);
 
-                        for(int i = 0; i<= (return_fieldCount - 1); i++) { 
-                            dr.GetName(i).ToString();
-                        }
-
+                    for (int i = 0; i < return_fieldCount; i++)
+                    {
+                        Console.WriteLine(dr.GetName(i).ToString());
+                        Console.WriteLine(values[i].ToString());
+                        Console.WriteLine();
                     }
                 }
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
+
+        // 6-18
+        protected static void Exec_GetOrdinal(string connStrings)
+        {
+            string queryString = "SELECT DISTINCT CategoryID from Categories";
+            using (SqlConnection Conn = new SqlConnection(connStrings))
+
+            {
+                SqlCommand cmd = new SqlCommand(queryString, Conn);
+                Conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                // 先執行區分大小寫的查詢, 如果失敗，執行第二次不區分大小寫的搜尋
+                int categoryId = dr.GetOrdinal("CategoryID");
+                Console.WriteLine(categoryId);
+
+                while (dr.Read())
+                {
+                    Console.WriteLine($"CategoryID: {dr.GetSqlInt32(categoryId)}");
+                }
+
+            }
+        }
+
+        protected static void Exec_IsDbNull(string connStrings)
+        {
+            object[] fieldValues = null;
+            string[] headers = null;
+
+            string queryString = "SELECT * from Categories";
+            using (SqlConnection Conn = new SqlConnection(connStrings))
+            {
+                Conn.Open();
+                SqlCommand cmd = new SqlCommand(queryString, Conn);
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            fieldValues = new object[dr.FieldCount];
+                            headers = new string[dr.FieldCount];
+
+                            dr.GetValues(fieldValues);
+                            for (int i = 0; i < dr.FieldCount; i++)
+                            {
+                                headers[i] = dr.GetName(i);
+                                if (dr.IsDBNull(dr.GetName(i)))
+                                {
+                                    fieldValues[i] = "NA";
+                                }
+                            }
+                            Console.WriteLine(string.Join(",", headers));
+                            Console.WriteLine(string.Join(",", fieldValues));
+                        }
+                    }
+                }
+                cmd.Cancel();
+            }
+        }
+
+
+
     }
 }
