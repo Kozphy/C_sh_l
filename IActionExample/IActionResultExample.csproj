@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Sample.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\Sample.pdf" />
   </ItemGroup>
 

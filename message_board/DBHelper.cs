@@ -29,9 +29,5 @@ namespace message_board
             adapter.Fill(ds, dsName);
             return ds;
         }
-
-
-        
-
     }
 }
