@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using mvc_api.Models;
 
 namespace mvc_api.Controllers
 {
@@ -9,13 +11,6 @@ namespace mvc_api.Controllers
             return View();
         }
 
-        //[Route("api/[controller]")]
-        //[ApiController]
-        //public class ArticleController : ControllerBase
-        //{
-        //    private readonly BlogContext _context;
 
-        //    public ArticleController(Blo)
-        //}
     }
 }

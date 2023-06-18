@@ -1,4 +1,7 @@
-using mvc_api.Data;
+using Microsoft.EntityFrameworkCore;
+using mvc_api.Models;
+using Serilog;
+using System.Text.Json.Serialization;
 
 namespace mvc_api
 {
@@ -9,8 +12,14 @@ namespace mvc_api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
-            builder.Services.AddTransient<BlogContext>();
+            builder.Services.AddControllersWithViews().AddJsonOptions(
+                options => {
+                    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                });
+
+            builder.Services.AddDbContext<BlogContext>(options => 
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
 
             var app = builder.Build();
 
@@ -28,6 +37,30 @@ namespace mvc_api
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            // setting Serilog
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console(outputTemplate: 
+                "[{Timestamp:HH:mm:ss} {fileName}:{lineNum} {Level:u3}] {Message:lj} {NewLine}{Exception} ")
+                .CreateLogger();
+
+            var log = Log.Logger;
+
+
+            using var scrope = app.Services.CreateScope();
+            var services = scrope.ServiceProvider;
+            try
+            {
+                var context = services.GetRequiredService<BlogContext>();
+                Seed.SeedUsersData(context);
+                Seed.SeedArticlesData(log,context);
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+                var logger = services.GetRequiredService<ILogger<Program>>();
+                logger.LogError(ex, "Error occured during seed data");
+            }
+
 
             app.Run();
         }
