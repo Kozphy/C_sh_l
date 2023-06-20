@@ -29,7 +29,17 @@ namespace SendEmail
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = node_file_provider,
-                RequestPath = "/node_modules"
+                RequestPath = node_request_path
+            });
+
+            var bundle_file_provider = new PhysicalFileProvider(
+                    Path.Combine(builder.Environment.ContentRootPath, "Scripts"));
+            var bundle_request_path = "/Scripts";
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = bundle_file_provider,
+                RequestPath =bundle_request_path 
             });
 
             app.UseDirectoryBrowser(new DirectoryBrowserOptions

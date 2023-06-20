@@ -1,14 +1,16 @@
 ﻿//import axios from '../js/axios/axios.js';
 //const axios = require('../js/axios/axios.js');
-import axios from "../../node_modules/axios/index.js";
+//import { axios } from "../../node_modules/axios/index.js";
+//import axios from "../../Scripts/axios.bundle.js";
+//let axios = require("../../node_modules/axios/index.js");
 //import axios from "/node_modules/axios/index.js";
 //import axios from "axios";
 
 //require('.env').config();
 //import MailtrapClient from "/lib/mailtrap/dist/index.js";
-//console.log(axios);
+console.log(testData);
+
 let sendMailBtn = document.querySelector(".sendMailBtn");
-console.log(sendMailBtn);
 
 sendMailBtn.addEventListener("click", async function (e) {
     console.log(1);
