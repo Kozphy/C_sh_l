@@ -6,10 +6,10 @@
 //import axios from "axios";
 
 //import MailtrapClient from "/lib/mailtrap/dist/index.js";
-//console.log(axios);
+console.log(testData);
+
 let sendMailBtn = document.querySelector(".sendMailBtn");
 console.log(sendMailBtn);
-let email_access_data;
 
 (async () => {
     email_access_data = await axios.get("http://localhost:5189/Home/GetMailAccess");
