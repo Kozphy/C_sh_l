@@ -12,6 +12,8 @@ console.log(testData);
 
 let sendMailBtn = document.querySelector(".sendMailBtn");
 
+
+
 sendMailBtn.addEventListener("click", async function (e) {
     console.log(1);
     let SendToWhere = document.querySelector(".emailToWhere");
