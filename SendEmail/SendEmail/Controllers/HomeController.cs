@@ -13,8 +13,24 @@ namespace SendEmail.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        public ActionResult GetMailAccess() {
+            Dictionary<string, string> mail_access = new Dictionary<string, string>()
+            {
+                { "mail_driver", DotNetEnv.Env.GetString("MAIL_DRIVER")},
+                { "mail_token", DotNetEnv.Env.GetString("MAIL_TOKEN") },
+                { "mail_port", DotNetEnv.Env.GetString("MAIL_PORT")},
+                { "mail_encryption", DotNetEnv.Env.GetString("MAIL_ENCRYPTION")},
+                { "mail_token", DotNetEnv.Env.GetString("MAIL_TOKEN")},
+                { "api_mail_from_address", DotNetEnv.Env.GetString("API_MAIL_FROM_ADDRESS")},
+            };
+
+            return Json(mail_access);
+        }
+
         public IActionResult Index()
         {
+            
             return View();
         }
 

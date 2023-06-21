@@ -1,16 +1,23 @@
 ﻿//import axios from '../js/axios/axios.js';
 //const axios = require('../js/axios/axios.js');
-import axios from "../../node_modules/axios/index.js";
+//import axios from "../../node_modules/axios/index.js";
+//import '../../node_modules/dotenv/config.js';
 //import axios from "/node_modules/axios/index.js";
 //import axios from "axios";
 
-//require('.env').config();
 //import MailtrapClient from "/lib/mailtrap/dist/index.js";
 //console.log(axios);
 let sendMailBtn = document.querySelector(".sendMailBtn");
 console.log(sendMailBtn);
+let email_access_data;
+
+(async () => {
+    email_access_data = await axios.get("http://localhost:5189/Home/GetMailAccess");
+    console.log(email_access_data);
+})();
 
 sendMailBtn.addEventListener("click", async function (e) {
+
     console.log(1);
     let SendToWhere = document.querySelector(".emailToWhere");
     if (SendToWhere.value.length > 0) {

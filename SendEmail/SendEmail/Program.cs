@@ -6,6 +6,8 @@ namespace SendEmail
     {
         public static void Main(string[] args)
         {
+            DotNetEnv.Env.Load();
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -22,21 +24,21 @@ namespace SendEmail
             app.UseStaticFiles();
             //app.Logger.LogInformation(builder.Environment.ContentRootPath);
 
-            var node_file_provider = new PhysicalFileProvider(
-                    Path.Combine(builder.Environment.ContentRootPath, "node_modules"));
-            var node_request_path = "/node_modules";
+            //var node_file_provider = new PhysicalFileProvider(
+            //        Path.Combine(builder.Environment.ContentRootPath, "node_modules"));
+            //var node_request_path = "/node_modules";
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = node_file_provider,
-                RequestPath = "/node_modules"
-            });
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = node_file_provider,
+            //    RequestPath = "/node_modules"
+            //});
 
-            app.UseDirectoryBrowser(new DirectoryBrowserOptions
-            {
-                FileProvider = node_file_provider,
-                RequestPath = node_request_path
-            });
+            //app.UseDirectoryBrowser(new DirectoryBrowserOptions
+            //{
+            //    FileProvider = node_file_provider,
+            //    RequestPath = node_request_path
+            //});
 
 
             app.UseRouting();
