@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Mvc;
+using MimeKit;
 using SendEmail.Models;
 using System.Diagnostics;
 
@@ -12,20 +14,57 @@ namespace SendEmail.Controllers
         {
             _logger = logger;
         }
-
+        [Route("api/GetMailTrapAccess")]
         [HttpGet]
         public ActionResult GetMailAccess() {
             Dictionary<string, string> mail_access = new Dictionary<string, string>()
             {
-                { "mail_driver", DotNetEnv.Env.GetString("MAIL_DRIVER")},
-                { "mail_token", DotNetEnv.Env.GetString("MAIL_TOKEN") },
-                { "mail_port", DotNetEnv.Env.GetString("MAIL_PORT")},
-                { "mail_encryption", DotNetEnv.Env.GetString("MAIL_ENCRYPTION")},
-                { "mail_token", DotNetEnv.Env.GetString("MAIL_TOKEN")},
-                { "api_mail_from_address", DotNetEnv.Env.GetString("API_MAIL_FROM_ADDRESS")},
+                { "mail_server", DotNetEnv.Env.GetString("SEND_MAIL_SERVER")},
+                { "mail_username", DotNetEnv.Env.GetString("SEND_MAIL_USERNAME")},
+                { "mail_password", DotNetEnv.Env.GetString("SEND_MAIL_PASSWORD")},
+                { "mail_securetoken", DotNetEnv.Env.GetString("SEND_MAIL_SECURETOKEN")},
             };
 
             return Json(mail_access);
+        }
+
+        [HttpPost]
+        [Route("MailKit/SendMail", Name ="SendMail")]
+        public void SendMail([FromForm] string userEmail) {
+            Console.WriteLine(userEmail);
+            //return;
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("GoSweet", "GoSweet@gmail.com"));
+            message.To.Add(new MailboxAddress("Mrs. Chanandler Bong", "testdbdf0147@gmail.com@friends.com"));
+            message.Subject = "check for reset password'?";
+            var builder = new BodyBuilder();
+            builder.HtmlBody = "<a href=http://localhost:5189/Home/Privacy>click here to reset password</a>";
+            message.Body = builder.ToMessageBody();
+
+//            message.Body = new TextPart("plain")
+//            {
+//                Text = @"Hey Chandler,
+
+//I just wanted to let you know that Monica and I were going to go play some paintball, you in?
+
+//-- Joey"
+//            };
+
+            using (var client = new SmtpClient())
+            {
+                client.Connect("smtp.gmail.com", 587, false);
+
+                // Note: only needed if the SMTP server requires authentication
+                client.Authenticate("joey", "password");
+
+                client.Send(message);
+                client.Disconnect(true);
+            }
+        }
+
+        [Route("Login", Name ="Login")]
+        public void Login() { 
+
         }
 
         public IActionResult Index()
