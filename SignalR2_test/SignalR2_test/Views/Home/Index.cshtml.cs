@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SignalR2_test.Pages
+namespace SignalR2_test.Pages.View.Home
 {
     public class IndexModel : PageModel
     {

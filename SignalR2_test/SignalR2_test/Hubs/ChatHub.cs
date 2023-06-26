@@ -10,5 +10,13 @@ namespace SignalR2_test.Hubs
             await client.SendAsync("ReceiveMessage", user, message);
             //await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
+        //public Task SendPrivateMessage(string user, string message)
+        //{
+        //    Clients.User().SendAsync("")
+        //}
+
+        public Task SendMessageToGroup(string sender, string receiver, string message) { 
+            return Clients.Group(receiver).SendAsync("ReceiveMessage",sender, message);
+        }
     }
 }

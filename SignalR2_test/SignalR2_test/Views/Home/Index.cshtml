@@ -1,5 +1,4 @@
-﻿@page
-@model IndexModel
+﻿@model SignalR2_test.Models.User
 @{
     ViewData["Title"] = "Home page";
 }
@@ -10,6 +9,19 @@
 <button type="button" class="btn btn-link chatBtn  px-1 py-0">
     <i class="bi bi-chat-dots-fill " style="font-size:30px;"></i>
 </button>
+
+<div class="container">
+    <from >
+        <label class="form-label" asp-for="UserId"></label>
+        <input class="form-control" asp-for="UserId" disabled/>
+
+        <label class="form-label" asp-for="UserName"></label>
+        <input class="form-control" asp-for="UserName" />
+
+        <label class="form-label" asp-for="UserPassword"></label>
+        <input class="form-control" asp-for="UserPassword" />
+    </from>
+</div>
 
 <div class="dialogue">
     <div class="userTalkSection">
