@@ -57,7 +57,7 @@ namespace ECPAY.Controllers
             }
 
 
-            Console.WriteLine(data.MerchantID);
+            //Console.WriteLine(data.MerchantID);
             //Console.WriteLine(data.MerchantID);
             //Console.WriteLine(data.MerchantTradeNo);
             //Console.WriteLine(data);

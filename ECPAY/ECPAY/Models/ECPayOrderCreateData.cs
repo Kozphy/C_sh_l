@@ -14,6 +14,7 @@ namespace ECPAY.Models
         public string? ItemName { get; set; }
         public string? ReturnURL { get; set; }
         public string? ChoosePayment { get; set; }
-        public string? EncryptType { get; set; }
+        public int? EncryptType { get; set; }
+        public string? CheckMacValue { get; set; }
     }
 }

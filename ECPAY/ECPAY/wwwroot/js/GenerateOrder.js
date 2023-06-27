@@ -48,9 +48,9 @@ createOrderBtn.addEventListener("click", async function (e) {
 
         let res = await axios.post("http://localhost:5177/Home/CreateOrder", {
             headers: {
-                "content-type": "application/json;charset=utf-8"
+                "content-type": "application/json;charset=UTF-8"
             },
-            data: JSON.stringify(data)
+            data: data
         })
         console.log(res);
         console.log(res.data);
