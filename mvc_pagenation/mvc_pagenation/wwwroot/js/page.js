@@ -12,27 +12,50 @@ async function GetTotalPage() {
     }
 }
 
-function RenderPagination() {
-    let start = 1;
-    let end = 10;
-    let pagination = document.querySelector(".pagination");
-    let arr = ['<li class="page-item"><a class="page-link" href="#">Previous</a></li>',
-        '<li class="page-item"><a class="page-link" href="#">Next</a></li>'
-    ];
-    for (let i = start; i < end; i++) {
-        arr.splice(arr.length-1, 0, `<li class="page-item"><a class="page-link" href="#">${i}</a></li>`
-        );
-    }
-    arr = arr.join("");
+function RenderPagination(c, m) {
+    let current = c,
+        last = m,
+        delta = 2,
+        left = current - delta,
+        right = current + delta + 1,
+        range = ['<li class="page-item"><a class="page-link" href="#">Previous</a></li>',
+            '<li class="page-item"><a class="page-link" href="#">Next</a></li>'
+        ],
+        rangeWithDots = [],
+        l;
 
-    pagination.insertAdjacentHTML('beforeend', arr);
+    for (let i = 1; i <= last; i++) {
+        if (i == 1 || i == last || i >= left && i < right) {
+            range.splice(range.length - 1, 0, `<li class="page-item"><a class="page-link" href="#">${i}</a></li>`
+            );
+        }
+    }
+    console.log(range);
+
+
+    for (let i of range) {
+        if (l) {
+            if (i - l === 2) {
+                rangeWithDots.push(l + 1);
+            } else if (i - l !== 1) {
+                rangeWithDots.push('...');
+            }
+        }
+        rangeWithDots.push(i);
+        l = i;
+    }
+
+    rangeWithDots = rangeWithDots.join("");
+    return rangeWithDots;
 }
 
-RenderPagination();
+let pagination = document.querySelector(".pagination");
 
-lastPageBtn.addEventListener("click",  async function (e) {
-    
+let res = RenderPagination(1, 10);
+console.log(res)
+pagination.insertAdjacentHTML('beforeend', res);
+
+lastPageBtn.addEventListener("click", async function (e) {
+
 });
-
-
 
