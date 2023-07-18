@@ -24,8 +24,8 @@ namespace ECPAY.Controllers
             return View();
         }
 
-        
-        private string BuildCheckMacValue(string HashKey, string HashIV,string parameters, int encryptType = 0)
+
+        private string BuildCheckMacValue(string HashKey, string HashIV, string parameters, int encryptType = 0)
         {
             string szCheckMacValue = String.Empty;
             string reshash = String.Empty;
@@ -37,7 +37,8 @@ namespace ECPAY.Controllers
                 using (SHA256 sha256 = SHA256.Create())
                 {
                     byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(szCheckMacValue));
-                    foreach (byte b in hashValue) {
+                    foreach (byte b in hashValue)
+                    {
                         reshash += $"{b:X2}";
                     }
                 }
@@ -50,14 +51,15 @@ namespace ECPAY.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateOrder([FromBody] ECPayOrderCreateDataJSON data) {
+        public IActionResult CreateOrder([FromBody] ECPayOrderCreateDataJSON data)
+        {
             //DateTime date = DateTime.ParseExact(new DateTime().ToString(),"yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture);
 
             List<string> enErrors = new List<string>();
 
             string HashKey = "spPjZn66i0OhqJsQ";
             string HashIV = "hT5OJckN45isQTTs";
-            string date =  DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+            string date = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
 
             data.MerchantTradeDate = date;
             data.CheckMacValue = BuildCheckMacValue(HashKey, HashIV, data.CheckMacValue, data.EncryptType).ToUpper();
@@ -65,16 +67,18 @@ namespace ECPAY.Controllers
 
             //return Json(data);
 
-            foreach (PropertyDescriptor desc in TypeDescriptor.GetProperties(data)) {
+            foreach (PropertyDescriptor desc in TypeDescriptor.GetProperties(data))
+            {
                 string name = desc.Name;
                 object value = desc.GetValue(data);
                 Console.WriteLine("{0}={1}", name, value);
             }
 
-            try { 
+            try
+            {
                 using (AllInOne oPayment = new AllInOne())
                 {
-                     /* 服務參數 */
+                    /* 服務參數 */
                     oPayment.ServiceMethod = ECPay.Payment.Integration.HttpMethod.HttpPOST;
                     oPayment.ServiceURL = "https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5";
                     oPayment.HashKey = HashKey; //ECPay提供的Hash Key
@@ -110,32 +114,37 @@ namespace ECPAY.Controllers
                         Currency = "新台幣",//幣別單位
                         Quantity = Int32.Parse("1"),//購買數量
                         URL = "http://google.com",//商品的說明網址
-                        
+
                     });
                     /* 產生訂單 */
-                     enErrors.AddRange(oPayment.CheckOut());
+                    enErrors.AddRange(oPayment.CheckOut());
                     //Console.WriteLine(res);
                 }
-                
-            }catch(Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 enErrors.Add(ex.Message);
             }
-            finally { 
-                if(enErrors.Count() > 0) {
-                     string szErrorMessage = String.Join("\\r\\n", enErrors);
+            finally
+            {
+                if (enErrors.Count() > 0)
+                {
+                    string szErrorMessage = String.Join("\\r\\n", enErrors);
                     Console.WriteLine(szErrorMessage);
                 }
             }
             return View();
             //return Json(data);
         }
-        
-        public IActionResult OrderReturn() {
+
+        public IActionResult OrderReturn()
+        {
             return View();
         }
 
-        public IActionResult OrderResult() { 
+        public IActionResult OrderResult()
+        {
             return View();
         }
 
