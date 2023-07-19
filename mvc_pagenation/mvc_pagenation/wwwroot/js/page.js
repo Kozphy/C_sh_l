@@ -41,6 +41,7 @@ function RenderPagination(c, m) {
                 rangeWithDots.push('...');
             }
         }
+
         rangeWithDots.push(i);
         l = i;
     }
